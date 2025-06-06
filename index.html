@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><b>DB Data Bundle Store</b></title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4213/4213693.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toggle-dark" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</div>
+  <header>
+    <h1 class="title">DB DATA BUNDLE STORE</h1>
+  </header>
+
+  <div class="container">
+    <h2>Order a Data Bundle</h2>
+    <form id="bundleForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" required />
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required />
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" required />
+      <label for="network">Choose Network</label>
+      <select id="network" required>
+        <option value="">Select a network</option>
+        <option value="mtn">MTN</option>
+        <option value="at">AT</option>
+        <option value="telecel">Telecel</option>
+      </select>
+      <label for="bundle">Select Bundle</label>
+      <select id="bundle" required>
+        <option value="">Select a bundle</option>
+      </select>
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" rows="3" placeholder="Any instructions or comments..."></textarea>
+      <button type="submit">Order & Continue to Pay</button>
+    </form>
+  </div>
+
+  <div class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial active">"Super fast delivery and great prices. Highly recommend!" – Ama K.</div>
+    <div class="testimonial">"Very reliable service, I always buy my bundles here." – Kwesi B.</div>
+    <div class="testimonial">"Excellent support on WhatsApp. Simple process too!" – Linda M.</div>
+  </div>
+
+  <a href="https://wa.me/233598699581" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+  <div class="footer">
+    &copy; 2025 DB Data Bundles. All rights reserved.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

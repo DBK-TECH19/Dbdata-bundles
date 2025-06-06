@@ -1,0 +1,161 @@
+
+:root {
+  --sea-blue: #0077b6;
+  --white: #ffffff;
+  --light-blue: #caf0f8;
+  --yellow: #ffcc00;
+  --text-color: #333;
+  --dark-blue: #023e8a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--sea-blue);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-image: linear-gradient(to bottom, var(--sea-blue), var(--dark-blue));
+  color: var(--white);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0 0 1rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container, .testimonials {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--white);
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 2px solid var(--sea-blue);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+button {
+  background-color: var(--yellow);
+  color: #000;
+  padding: 0.8rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #eee;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  cursor: pointer;
+  text-align: center;
+}
+
+.testimonials {
+  background-color: var(--light-blue);
+  text-align: center;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+  display: block;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggle-dark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: var(--yellow);
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  user-select: none;
+  font-weight: bold;
+}
+
+body.dark-mode {
+  --sea-blue: #1a1a2e;
+  --white: #2c2c2c;
+  --text-color: #f1f1f1;
+  --light-blue: #3d5a80;
+  --yellow: #fcbf49;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode label, body.dark-mode .footer {
+  color: var(--text-color);
+}
